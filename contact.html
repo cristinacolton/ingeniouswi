@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+    <html lang="en">
+<head>
+     <meta charset="UTF-8" />
+     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link rel="stylesheet" href="style.css" />
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet"> 
+     <title>Ingenious Inc.</title>
+     <img src="images/header/flag_banner.jpg" width=100%>
+</head>
+<body>
+
+    <!--Navbar-->
+       <nav class="navbar">
+       <!-- LOGO -->
+       <a href="index.html" class="logo">Ingenious Inc.</a>
+       <!-- NAVIGATION MENU -->
+       <ul class="nav-links">
+       <!-- USING CHECKBOX HACK -->
+       <input type="checkbox" id="checkbox_toggle" />
+       <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+       <!-- NAVIGATION MENUS -->
+       <div class="menu">
+       <li>
+           <a href="index.html" class="middle">Home</a>
+          </li>
+       <li>
+           <a href="index.html#aboutpage" class="middle">About</a>
+          </li>
+       <li>
+           <a href="contact.html" class="middle">Contact</a>
+          </li>
+       </div>
+      </ul>
+      </nav>
+      
+<div class="contact">
+
+    <div class="drop">
+      <h1>Drop Us A Line</h1>
+      <img src="images/header/main-slider-child-1-min.png" class="contactpic">
+    </div>
+
+<div class="info">
+    <p>e. <a href="mailto:ingeniouswi@gmail.com subject=message">ingeniouswi@gmail.com</a>&nbsp&nbsp&nbsp&nbsp t. <a href="tel:414-377-8296">414-377-8296</a>&nbsp&nbsp&nbsp&nbsp a. <a href="https://www.google.com/maps/place/Ingenious+Child+Care/@42.9126477,-88.0084063,17z/data=!3m1!4b1!4m5!3m4!1s0x8805139d71c238fb:0x15578863da8f2c1!8m2!3d42.9126705!4d-88.0086854" target=”_blank”>7260 S. 76th St. Franklin, WI 53221</a></p>
+</div>
+
+    <div class="container">
+  
+    <form onsubmit="sendEmail(); reset(); return false;">
+        <h3>Get In Touch</h3>
+      <input type="text" id="text" class="form-control" placeholder="Your Name" required><br>
+      <input type="email" id="email" class="form-control" placeholder="Email id" required><br>
+      <input type="text" id="phone" class="form-control" placeholder="Phone" required><br>
+      <textarea id="message" class="form-control" placeholder="How can we help you?" rows="4" required></textarea>
+      <br>
+      <button type="submit">Send</button>
+
+    </form>
+    </div>
+  </div>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+      function sendEmail(){
+    Host : "smtp.gmail.com",
+    Username : "ingeniouswi@gmail.com",
+    Password : "Nara7260!",
+    To : 'ingeniouswi@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "New Contact Form Inquiry",
+    Body : "Name: "+document.getElementById("name").value
+    + "<br> Email: " + document.getElementById("email").value
+    + "<br> Phone: " + document.getElementById("Phone").value
+    + "<br> Message: " + document.getElementById("message").value
+}).then(
+  message => alert(Message Sent Sucessfully)
+);  
+}
+
+  </script>
+  </body>
+  </html>

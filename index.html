@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+    <html lang="en">
+<head>
+     <meta charset="UTF-8" />
+     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link rel="stylesheet" href="style.css" />
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet"> 
+     <title>Ingenious Inc.</title>
+     <img src="images/header/flag_banner.jpg" width=100%>
+</head>
+<body>
+
+  <!--Navbar-->
+     <nav class="navbar">
+     <!-- LOGO -->
+     <a href="index.html" class="logo">Ingenious Inc.</a>
+     <!-- NAVIGATION MENU -->
+     <ul class="nav-links">
+     <!-- USING CHECKBOX HACK -->
+     <input type="checkbox" id="checkbox_toggle" />
+     <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+     <!-- NAVIGATION MENUS -->
+     <div class="menu">
+     <li>
+         <a href="index.html" class="middle">Home</a>
+        </li>
+     <li>
+         <a href="#aboutpage" class="middle">About</a>
+        </li>
+     <li>
+         <a href="contact.html" class="middle">Contact</a>
+        </li>
+     </div>
+    </ul>
+    </nav>
+
+   
+
+    </body>
+
+
+<!--HOME Page-->
+
+    <!--Slideshow-->
+<section class="home">
+
+<div class="slideshow">
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+        <div class="numbertext">1 / 7</div>
+        <img src="images/classrooms/outdoors.JPG" style="width:100%">
+        <div class="text">Outdoor Playground & Sandbox</div>
+      </div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 7</div>
+  <img src="images/slider/playground_2.JPG" style="width:100%">
+  <div class="text">Indoor Playground</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 7</div>
+  <img src="images/classrooms/infant.jpg"  style="width:100%">
+  <div class="text">Infant Classroom</div>
+</div>
+
+<div class="mySlides fade">
+    <div class="numbertext">4 / 7</div>
+    <img src="images/classrooms/Mexico.jpg" style="width:100%">
+    <div class="text">1 - 2 Years Old Classroom</div>
+  </div>
+
+<div class="mySlides fade">
+  <div class="numbertext">6 / 7</div>
+  <img src="images/classrooms/2.jpg" style="width:100%">
+  <div class="text">2 Year Old Classroom</div>
+</div>
+
+<div class="mySlides fade">
+    <div class="numbertext">6 / 7</div>
+    <img src="images/classrooms/25.jpg" style="width:100%">
+    <div class="text">2 1/2 Year Old Classroom</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">7 / 7</div>
+    <img src="images/classrooms/afterschool.jpg" style="width:100%">
+    <div class="text">Preschool & Afterschool Classroom</div>
+  </div>
+
+
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+  <span class="dot" onclick="currentSlide(6)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+    <!-- Intro -->
+
+<div class="intro">
+    <div>
+  <h1><id class="imagine">Imagine. </id><id class="make"> Make.</id><id class="believe"> Believe.</id></h1>
+<div>
+<p>Your goal?<br> To give your child the best possible start in life. <br>Ours? <br>To bring you the best possible child care.</p>
+</div>
+</div>
+</section>
+
+
+<!-- About Page-->
+
+
+<section id="aboutpage">
+  <div class="offer">
+    <h1><img src="images/icons/arrow-left-yellow.png">Here is what we offer</h1>
+    <h2 class="afterschool"><img src='images/icons/clock-icon.png' width=50px height=50px>Afterschool&nbsp;&nbsp;&nbsp;<id class="kindergarten"><img src='images/icons/plane-icon.png' width=50px height=50px>Kindergarten</id></h2>
+    <h2 class="toddler"><img src='images/icons/toddler-icon.png' width=50px height=50px>Toddler Care&nbsp;&nbsp;&nbsp;<id class="infant"><img src='images/icons/tent-icon.png' width=50px height=50px>Infant Care</id></h2>
+  </div>
+  
+<div class="about">
+    <div>
+    <div class="some">
+    <h1>Some Things About Us</h1>
+<img src="images/header/main-slider-child-2-min.png" class="aboutpic"></div>
+
+    <h2>It's All About the Kids <img src="images/icons/arrow.png"></h2>
+    <img src="images/daycare/Lentils.jpg" class="lentils" height=200px>
+    <img src="images/daycare/taco.jpg" class="taco" height=150px>
+
+    <div class="healthy"><h3>Healthy Meals</h3><br>
+    <h4>Ingenious offers meals that are cooked in house. 
+        We strive for all products on our menu to be free of chemicals. Meats will be 100% natural, no artificial ingredients, no artificial colors, no preservativies, no hormones or antibiotics.<br> We try to reduce the amount of sugar for our meals where we can. 
+        We have an ethnic menu that includes indian, mexican, chinese, italian, and more. On Fridays we are vegetarian! </h4>
+    </div>
+
+       
+        
+<br>
+  <div class="diversity">
+    <h3>Diversity</h3><br>
+    <h4>Not only are our foods diverse, but we are a bilingual center that teaches in English and Spanish. We incorporate the spanish language through music, books, numbers, and art. </h4>
+  </div>
+
+  <div class="mindful">
+    <h3>Mindful Child Care</h3><br>
+    <h4>Children love to explore the world around them, and we want to provide them a peaceful and creative journey of life. 
+        We provide our children with different mindful activities throughout the day like: yoga, breathing exercises, and awareness practices. 
+        Our children will learn to be in touch with their internal and external environments to cultivate social and emotional understanding. 
+    </h4><br>
+  </div>
+<br>
+  <div class="brightwheel">
+    <h3>Brightwheel App Daily Tracking</h3><br>
+    <h4>At Ingenious we incorporate an app that allows us to keep track of your children's daily activities, meals, diaper changes, naps, incidents, and medications.
+        This app is very useful for you to feel like your involved in your childs day to day. We also use Brightwheels billing system to process payments. 
+    </h4><br>
+  </div>
+
+  <iframe width="430" height="215" class="brightwheelvid" src="https://www.youtube.com/embed/ykj6vgz2Brs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <br>
+  <div class="air">
+    <h3>High Quality Air Filtration System</h3><br>
+    <h4>Having a quality air filtration will reduce the spread of germs.</h4>
+  </div>
+
+  <div class="covid">
+    <h3>COVID-19 Procedures</h3><br>
+    <h4>We follow the CDC guidelines and the Franklin Health department. Masks are asked to be worn by all staff, children aged 2+, and visitors. We disenfect all common spaces daily and toys. </h4>
+  </div>
+<br>
+  </section>
+  <div class="footer">
+    <p>e. <a href="mailto:ingeniouswi@gmail.com subject=message">ingeniouswi@gmail.com</a>&nbsp&nbsp&nbsp&nbsp t. <a href="tel:414-377-8296">414-377-8296</a>&nbsp&nbsp&nbsp&nbsp a. <a href="https://www.google.com/maps/place/Ingenious+Child+Care/@42.9126477,-88.0084063,17z/data=!3m1!4b1!4m5!3m4!1s0x8805139d71c238fb:0x15578863da8f2c1!8m2!3d42.9126705!4d-88.0086854" target=”_blank”>7260 S. 76th St. Franklin, WI 53221</a></p>
+  </div>
+<!-- Contact Page-->
+
+
+</body>
+</html>
